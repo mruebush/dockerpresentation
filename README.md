@@ -8,7 +8,7 @@
 - Docker
 - Boot2Docker/Machine
 - Registry
--- Root Registry
+- Root Registry vs user
 ## Installing Docker
 ## Using Docker (key tags)
 - run
