@@ -15,7 +15,6 @@
 - build
 - ps
 - inspect docker inspect $(docker ps -q) | grep IPA
-- 
 ## Working with the Docker Registry
 ## Anatomy of a DockerFile
 ## How Much in the DockerFile vs Base Image
@@ -30,4 +29,7 @@
 ## Docker Workflow
 ## Docker Build Containers
 ## Securing Docker Containers
+## Monitoring Containers statd, logs
+- ELK stack
+- Monitoring tools
 ## Docker and Jenkins Integration
