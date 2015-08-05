@@ -31,7 +31,9 @@
 ## Docker Machine and Boot2Docker Overview
 ## Scaling with Docker Swarm
 ## Docker Workflow
-## Docker Build Containers
+- Docker Build Containers
+- Going to Production
+
 ## Securing Docker Containers
 ## Monitoring Containers statd, logs
 - ELK stack
