@@ -2,18 +2,22 @@
 - Docker is a tool that can be used to create lightweight containers.
 - Build out a Streaming environment with NiFi, Spark, Hadoop and Kafka
 - Build out a Node.js workflow demo
+
 ## What is a container, cgroup, ?
+
 ## Docker Ecosystem
 - Docker
 - Boot2Docker/Machine
 - Registry
 - Root Registry vs user
+
 ## Installing Docker
 ## Using Docker (key tags)
 - run
 - build
 - ps
 - inspect docker `inspect $(docker ps -q) | grep IPA`
+
 ## Working with the Docker Registry
 ## Anatomy of a DockerFile
 ## How Much in the DockerFile vs Base Image
