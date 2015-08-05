@@ -1,7 +1,7 @@
 # Docker Presentation and Demo
--Docker is a tool that can be used to create lightweight containers.
--Build out a Streaming environment with NiFi, Spark, Hadoop and Kafka
--Build out a Node.js workflow demo
+- Docker is a tool that can be used to create lightweight containers.
+- Build out a Streaming environment with NiFi, Spark, Hadoop and Kafka
+- Build out a Node.js workflow demo
 
 ## What is a container?
 ## Docker Ecosystem
