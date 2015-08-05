@@ -26,6 +26,7 @@
 - Base for more centrally controlled stuff
 - multiple images or shell script to build?
 - Should be step in DevOps flow to create
+
 ## Building a Greater Ecosystem with Docker Compose
 ## Docker Machine and Boot2Docker Overview
 ## Scaling with Docker Swarm
@@ -35,4 +36,5 @@
 ## Monitoring Containers statd, logs
 - ELK stack
 - Monitoring tools
+
 ## Docker and Jenkins Integration
