@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Docker Presentation</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A presentation that runs through Docker and what some of the workflows could look like.">
+		<meta name="author" content="Mitch Ruebush">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -41,20 +41,90 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>The Magical World of Docker</h1>
+					<h3>A Journey through the magic and madness of Docker and Containers</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created by <a href="http://mruebush.github.io">Mitch Ruebush</a> / <a href="http://twitter.com/mruebush">@mruebush</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
+					<h2>What is a Container?</h2>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+						A container runs on top of an OS using the underlying OS services, but isolating its process through namespaces and resources (cpu, memory, Block I/O and network) through cgroups.
+						 It does not try to mimick the underlying hardware like a hypervisor for a VM and therefore can not run different operating systems. They all have to be the same.
+						 It allows for isolation and very quick startup of applications on the same server.
+					</p>
+				</section>
+				<section>
+					<h2>Working with a Container</h2>
+					<p>
+						<code>
+						docker run -it ubuntu bash
+						docker ps -a
+						docker commit s875hfd8shsd mruebush/testapp:1.1
+						docker images
+						docker run -it mruebush/testapp:1.1
+						which curl
+						Interatively build images, not sure what you need.
+						</code>
 					</p>
 				</section>
 
+				<section>
+					<h2>Dockerfile</h2>
+					<p>
+						A configuration file that can build an image, can check in the file to source control, integrates into the continous integration.
+						<code>
+						#Example of a Dockerfile
+						FROM ubuntu
+						RUN apt-get update && apt-get install -y nodejs curl
+						</code>
+					</p>
+				</section>
+				<section>
+					<h2>Docker Build command</h2>
+					<p>
+						Builds an image from the Dockerfile
+						-t tags image
+						-f location and name of the Dockerfile (default looks for file called Dockerfile in the current directory)
+					</p>
+					<code>
+						docker build -t mruebush/testapp:1.1 .
+						docker build -t mruebush/testapp:1.1 projectdirectory
+					</code>
+				</section>
+<!--put the Docker compared to VM picture here-->
+				<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+					<h2>Docker Ecosystem</h2>
+					<p>
+						Docker is an ecosystem that contains many tools. I think I will build out the groups for the ecosystem, need some sort of interactive layer.
+						Logical Capabilities with explanation and then Tech
+						<ul>
+							<li>Service Discovery</li>
+							<li>Global Configuration Store</li>
+							<li>Scheduler</li>
+							<li>Cluster Manager</li>
+							<li>Orchestration (Container Groups)</li>
+							<li>Shared Storage</li>
+							<li>Networking</li>
+							<li>Docker</li>
+							<li>docker-compose</li>
+							<li>boot2docker</li>
+							<li>docker-swarm</li>
+							<li>docker-machine</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Installing Docker</h2>
+					<p>
+						Docker only works on Linux currently. Microsoft is working hard at adding it to Windows. To run it on Windows or Mac OSX you need to use boot2docker or docker-machine. This will install a lightweight Linux instance running in a virtual machine. You can use boot2docker or docker-machine to manage this instance.
+						<a href="tutorial/boot2docker"></a>
+						<a href="tutorial/docker-machine"></a>
+					</p>
+				</section>
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
